@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jay's Project Website">
+    <title>My Updated HTML5 Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <div class="container">
+        <header>
+            <h1>Welcome to My Website</h1>
+            <button class="hamburger" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+        </header>
+        <nav role="navigation">
+            <ul>
+                <li><a href="#about-me">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <main id="main-content">
+            <section id="about-me">
+                <h2>About Me</h2>
+                <p>This is the about me section. You can add information about yourself here.</p>
+            </section>
+            <section id="projects">
+                <h2>Projects</h2>
+                <label for="project-filter">Filter by category:</label>
+                <select id="project-filter">
+                    <option value="all">All</option>
+                    <option value="category1">Category 1</option>
+                    <option value="category2">Category 2</option>
+                    <option value="category3">Category 3</option>
+                </select>
+                <div class="project-cards">
+                    <article data-category="category1">
+                        <h3>Project 1</h3>
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p>Description of Project 1.</p>
+                    </article>
+                    <article data-category="category2">
+                        <h3>Project 2</h3>
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p>Description of Project 2.</p>
+                    </article>
+                    <article data-category="category3">
+                        <h3>Project 3</h3>
+                        <img src="https://via.placeholder.com/150" alt="">
+                        <p>Description of Project 3.</p>
+                    </article>
+                </div>
+            </section>
+            <section id="skills">
+                <h2>Skills</h2>
+                <ul>
+                    <li>HTML5</li>
+                    <li>CSS3</li>
+                    <li>JavaScript</li>
+                    <li>Responsive Design</li>
+                    <li>Version Control (Git)</li>
+                </ul>
+            </section>
+            <section id="contact">
+                <h2>Contact</h2>
+                <form action="#" method="post" id="contact-form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required minlength="2">
+                    <br>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <br>
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" required minlength="10"></textarea>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
+        </main>
+    </div>
+    <footer>
+        <p>&copy; 2024 My Website</p>
+    </footer>
+    <div id="lightbox" class="lightbox" aria-hidden="true" tabindex="-1">
+        <button class="close" aria-label="Close">&times;</button>
+        <img class="lightbox-content" id="lightbox-img" alt="Expanded project image">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
